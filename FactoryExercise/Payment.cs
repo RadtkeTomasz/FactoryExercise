@@ -1,6 +1,6 @@
 ﻿public class Payment
 {
-    protected Payment(PaymentServiceProvider serviceProvider, string description, decimal total)
+    public Payment(PaymentServiceProvider serviceProvider, string description, decimal total)
     {
         this.Description = description;
         this.Provider = serviceProvider;
@@ -13,13 +13,7 @@
     public string Description { get; set; }
     public decimal TotalAmount { get; set; }
 
-    public static class PaymentFactory
-    {
-        public static Payment GeneratePayment(PaymentServiceProvider serviceProvider, string description, decimal totalAmount)
-        {
-            return new Payment(serviceProvider, description, totalAmount);
-        }
-    }
+    
 
     public enum PaymentServiceProvider
     {

@@ -1,4 +1,4 @@
-﻿public interface IPayment
+﻿public interface IPaymentGateway
 {
-    public string RealisePayment(Payment payment);
+    public void RealisePayment(Payment payment);
 }
