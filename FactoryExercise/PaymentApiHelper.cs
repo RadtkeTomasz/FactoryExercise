@@ -1,8 +1,8 @@
 ﻿using static Payment;
 
-public static class PaymentApiHelper : IPayment
+public class PaymentApiHelper : IPayment
 {
-    public static string RealisePayment(Payment payment)
+    public string RealisePayment(Payment payment)
     {
         return SendApiRequestWithPayment(payment.Provider, payment.Id, payment.TotalAmount);
     }
@@ -12,7 +12,7 @@ public static class PaymentApiHelper : IPayment
         
         switch (provider)
         {
-            case PaymentServiceProvider.Bank1: return "Bank1API";
+            case PaymentServiceProvider.Bank1: return "Bank1API pobrało ";
             case PaymentServiceProvider.Bank2: return "Bank2API";
             case PaymentServiceProvider.BLIK: return "BLIKAPI";
             case PaymentServiceProvider.Przelewy24: return "Przelewy24API";
